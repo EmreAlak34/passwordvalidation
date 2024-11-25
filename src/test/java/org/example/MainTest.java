@@ -42,4 +42,22 @@ public class MainTest {
         expected = true;
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    void test_hasUpperAndLowerCase() {
+        boolean actual = Main.hasUpperAndLowerCase("HalloleUte32);
+        boolean expected = true;
+        Assertions.assertEquals(expected, actual);
+
+        actual = Main.hasUpperAndLowerCase("schalke04");
+        expected = false;
+        Assertions.assertEquals(expected, actual);
+
+        actual = Main.hasUpperAndLowerCase("DEUTSCHLAND");
+        expected = false;
+        Assertions.assertEquals(expected, actual);
+
+        actual = Main.hasUpperAndLowerCase("MeinAccount");
+        expected = true;
+        Assertions.assertEquals(expected, actual);
+    }
 }
