@@ -39,4 +39,15 @@ public class Main {
         }
 
         return false;
-    }}
+    }
+    public static boolean isWeak(String password) {
+        String[] weakPasswords = {"Password1", "1234", "Aa345678", "abcd1234", "0000"};
+
+        for (int i = 0; i < weakPasswords.length; i++) {
+            if (weakPasswords[i].equals(password)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}

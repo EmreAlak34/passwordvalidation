@@ -60,4 +60,12 @@ public class MainTest {
         expected = true;
         Assertions.assertEquals(expected, actual);
     }
+    void test_isWeakPassword() {
+        Assertions.assertTrue(Main.isWeak("0000"));
+        Assertions.assertTrue(Main.isWeak("1234"));
+        Assertions.assertTrue(Main.isWeak("password"));
+        Assertions.assertFalse(Main.isWeak("StrongPassword2024"));
+        Assertions.assertFalse(Main.isWeak("MySuperSecurePwd1"));
+    }
+
 }
