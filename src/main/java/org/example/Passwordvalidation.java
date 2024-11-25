@@ -1,7 +1,7 @@
 package org.example;
 
 
-public class Main {
+public class Passwordvalidation {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
