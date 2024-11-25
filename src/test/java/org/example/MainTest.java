@@ -27,4 +27,19 @@ public class MainTest {
         expected = true;
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void test_gotDigits() {
+        boolean actual = Main.gotDigits("MeinPasswort9");
+        boolean expected = true;
+        Assertions.assertEquals(expected, actual);
+
+        actual = Main.gotDigits("Hamburg");
+        expected = false;
+        Assertions.assertEquals(expected, actual);
+
+        actual = Main.gotDigits("0123");
+        expected = true;
+        Assertions.assertEquals(expected, actual);
+    }
 }
