@@ -7,6 +7,6 @@ public class Main {
 
         }
     public static boolean minLength(String password) {
-        return password != null && password.length() >= 8;
+        return password.length() >= 8;  // Gibt true zurück, wenn die Länge des Passworts >= 8 ist
     }
     }
