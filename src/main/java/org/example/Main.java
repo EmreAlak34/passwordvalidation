@@ -50,4 +50,19 @@ public class Main {
         }
         return false;
     }
+    public static boolean hasSpecialCharacters(String password) {
+        char[] specialChars = {'!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '-', '=', '[', ']', '{', '}', '|', ';', ':', ',', '.', '<', '>', '?', '/'};
+
+        for (int i = 0; i < password.length(); i++) {
+            char currentChar = password.charAt(i);
+
+
+            for (int j = 0; j < specialChars.length; j++) {
+                if (currentChar == specialChars[j]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

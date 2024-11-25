@@ -67,5 +67,13 @@ public class MainTest {
         Assertions.assertFalse(Main.isWeak("StrongPassword2024"));
         Assertions.assertFalse(Main.isWeak("MySuperSecurePwd1"));
     }
+    void test_hasSpecialCharacters() {
+        Assertions.assertTrue(Main.hasSpecialCharacters("Hello@123")); // Contains '@'
+        Assertions.assertTrue(Main.hasSpecialCharacters("Password!")); // Contains '!'
+        Assertions.assertTrue(Main.hasSpecialCharacters("Java#Rules")); // Contains '#'
+        Assertions.assertFalse(Main.hasSpecialCharacters("NoSpecials")); // No special characters
+        Assertions.assertFalse(Main.hasSpecialCharacters("JustLetters123")); // No special characters
+    }
+
 
 }
