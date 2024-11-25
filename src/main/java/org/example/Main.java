@@ -18,4 +18,25 @@ public class Main {
         }
         return false;
     }
-    }
+    public static boolean hasUpperAndLowerCase(String password) {
+        boolean foundUppercase = false;
+        boolean foundLowercase = false;
+
+        for (int i = 0; i < password.length(); i++) {
+            char currentCharacter = password.charAt(i);
+
+            if (currentCharacter >= 'A' && currentCharacter <= 'Z') {
+                foundUppercase = true;
+            }
+
+            if (currentCharacter >= 'a' && currentCharacter <= 'z') {
+                foundLowercase = true;
+            }
+
+            if (foundUppercase && foundLowercase) {
+                return true;
+            }
+        }
+
+        return false;
+    }}

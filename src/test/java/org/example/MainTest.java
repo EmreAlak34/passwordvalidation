@@ -44,7 +44,7 @@ public class MainTest {
     }
     @Test
     void test_hasUpperAndLowerCase() {
-        boolean actual = Main.hasUpperAndLowerCase("HalloleUte32);
+        boolean actual = Main.hasUpperAndLowerCase("HalloleLeute32");
         boolean expected = true;
         Assertions.assertEquals(expected, actual);
 
